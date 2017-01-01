@@ -1,4 +1,6 @@
 var token;
+var statusField = document.getElementById("status");
+var sendStatus;
 
 function tokenRequest() {
     var request = new XMLHttpRequest();
@@ -10,7 +12,6 @@ function tokenRequest() {
 
 function processContact() {
     var name, eMail, message;
-    var statusField = document.getElementById("status");
     var nameField = document.getElementById("name");
     var emailField = document.getElementById("email");
     var messageField = document.getElementById("message");
@@ -40,10 +41,17 @@ function processContact() {
             nameField.value = "";
             emailField.value = "";
             messageField.value = "";
+            sendStatus = 1;
         }
     }
 }
 
 function validate(input) {
 
+}
+
+function resetStatus() {
+    if (sendStatus == 1) {
+        statusField.innerHTML = "";
+    }
 }

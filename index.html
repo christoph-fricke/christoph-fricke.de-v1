@@ -48,10 +48,10 @@
         <section>
             <div id="contact">
                 <div class="row">
-                    <input type="text" id="name" placeholder="Name" />
-                    <input type="email" id="email" placeholder="Email" />
+                    <input type="text" id="name" placeholder="Name" onclick="resetStatus()" />
+                    <input type="email" id="email" placeholder="Email" onclick="resetStatus()" />
                 </div>
-                <textarea id="message" autocomplete="off" placeholder="Message"></textarea>
+                <textarea id="message" autocomplete="off" placeholder="Message" onclick="resetStatus()" ></textarea>
                 <span id="status">  
                     </span>
                 <input type="submit" value="Send" onclick="processContact()" />
