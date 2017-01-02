@@ -25,7 +25,7 @@ if (isset($_SESSION["token"]) && $strToken == $_SESSION["token"]) {
     $status = 0;
 }
 
-return $status;
+echo $status;
 
 function test_input($data) {
     $data = trim($data);
