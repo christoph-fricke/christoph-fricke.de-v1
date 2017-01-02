@@ -21,7 +21,7 @@ if (isset($_SESSION["token"]) && $strToken == $_SESSION["token"]) {
     } catch(Exeption $e) {
         $status = 0;
     }
-}else {
+} else {
     $status = 0;
 }
 
