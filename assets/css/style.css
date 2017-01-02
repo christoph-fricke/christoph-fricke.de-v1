@@ -191,7 +191,7 @@ footer p {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
     header,
     section,
     footer,
@@ -214,5 +214,9 @@ footer p {
     .row input {
         width: 100%;
         margin: 5px 0px;
+    }
+
+    #status {
+        order: 1;
     }
 }
