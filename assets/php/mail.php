@@ -21,12 +21,10 @@ if (isset($_SESSION["token"]) && $strToken == $_SESSION["token"]) {
     } catch(Exeption $e) {
         $status = 0;
     }
-}
-else {
+}else {
     $status = 0;
 }
 
-header("Location: ../../index.html");
 return $status;
 
 function test_input($data) {
