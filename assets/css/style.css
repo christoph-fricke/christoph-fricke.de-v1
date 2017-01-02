@@ -90,6 +90,10 @@ hr {
     flex-direction: row;
 }
 
+.right {
+    justify-content: flex-end;
+}
+
 .row,
 textarea {
     width: 100%;
@@ -132,6 +136,14 @@ input[type="submit"] {
     background-color: #FFC107;
     border: none;
     border-radius: 0px;
+}
+
+#status {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px 5px;
+    order: -1;
+    line-height: 1.15em;
 }
 
 input:focus,
