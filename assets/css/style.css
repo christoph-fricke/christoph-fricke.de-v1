@@ -90,6 +90,10 @@ hr {
     flex-direction: row;
 }
 
+.right {
+    justify-content: flex-end;
+}
+
 .row,
 textarea {
     width: 100%;
@@ -132,6 +136,14 @@ input[type="submit"] {
     background-color: #FFC107;
     border: none;
     border-radius: 0px;
+}
+
+#status {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px 5px;
+    order: -1;
+    line-height: 1.15em;
 }
 
 input:focus,
@@ -179,7 +191,7 @@ footer p {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
     header,
     section,
     footer,
@@ -202,5 +214,9 @@ footer p {
     .row input {
         width: 100%;
         margin: 5px 0px;
+    }
+
+    #status {
+        order: 1;
     }
 }

@@ -22,9 +22,11 @@ function processContact() {
     message = messageField.value;
 
     if (name == "" || eMail == "" || message == "") {
-        statusField.innerHTML = "Enter in all fields!";
+        statusField.style.color = "#FF9800";
+        statusField.innerHTML = "Warning: All inputs are required.";
     } else if (eMail.search("@") == -1) {
-        statusField.innerHTML = "Please use a valid email-adress!";
+        statusField.style.color = "#FF9800";
+        statusField.innerHTML = "Warning: Email-adress is invalid.";
     } else {
         sendMail.open("POST", "assets/php/mail.php", true);
         sendMail.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -34,8 +36,10 @@ function processContact() {
     sendMail.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             if (this.responseText == 1) {
-                statusField.innerHTML = "Email has been send!";
+                statusField.style.color = "#4CAF50";
+                statusField.innerHTML = "Sucess: Email has been send!";
             } else {
+                statusField.style.color = "#F44336";
                 statusField.innerHTML = "Error: Email could not been send!";
             }
             nameField.value = "";
