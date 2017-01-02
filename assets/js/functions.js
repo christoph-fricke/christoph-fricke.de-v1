@@ -38,13 +38,13 @@ function processContact() {
             if (this.responseText == 1) {
                 statusField.style.color = "#4CAF50";
                 statusField.innerHTML = "Sucess: Email has been send!";
+                nameField.value = "";
+                emailField.value = "";
+                messageField.value = "";
             } else {
                 statusField.style.color = "#F44336";
                 statusField.innerHTML = "Error: Email could not been send!";
             }
-            nameField.value = "";
-            emailField.value = "";
-            messageField.value = "";
             sendStatus = 1;
         }
     }
