@@ -5,9 +5,14 @@ var sendStatus;
 function tokenRequest() {
     var request = new XMLHttpRequest();
 
-    request.open("GET", "assets/php/tokenCreator.php", false);
+    request.open("GET", "assets/php/tokenCreator.php", true);
     request.send();
-    token = request.responseText;
+
+    request.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            token = request.responseText;
+        }
+    }
 }
 
 function processContact() {
@@ -46,6 +51,7 @@ function processContact() {
                 statusField.innerHTML = "Error: Email could not been send!";
             }
             sendStatus = 1;
+            tokenRequest();
         }
     }
 }
