@@ -25,7 +25,16 @@ if (isset($_SESSION["token"]) && $strToken == $_SESSION["token"]) {
     $status = 0;
 }
 
-echo $status;
+echo $status . ";" . newToken();
+
+function newToken() {
+    $length = 32;
+    $secure = true;
+    
+    $token = bin2hex(openssl_random_pseudo_bytes($length, $secure));
+    $_SESSION['token'] = $token;
+    return $token;
+}
 
 function test_input($data) {
     $data = trim($data);
