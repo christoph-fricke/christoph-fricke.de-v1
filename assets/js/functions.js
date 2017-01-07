@@ -1,6 +1,6 @@
 var token;
 var statusField = document.getElementById("status");
-var sendStatus;
+var sendStatus = false;
 
 function tokenRequest() {
     var request = new XMLHttpRequest();
@@ -16,7 +16,7 @@ function tokenRequest() {
 }
 
 function processContact() {
-    var name, eMail, message;
+    var name, eMail, message, response;
     var nameField = document.getElementById("name");
     var emailField = document.getElementById("email");
     var messageField = document.getElementById("message");
@@ -40,9 +40,13 @@ function processContact() {
 
     sendMail.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            if (this.responseText == 1) {
+            response = this.responseText.split(";");
+            token = response[1];
+
+            if (response[0] == 1) {
                 statusField.style.color = "#4CAF50";
                 statusField.innerHTML = "Sucess: Email has been send!";
+
                 nameField.value = "";
                 emailField.value = "";
                 messageField.value = "";
@@ -50,18 +54,13 @@ function processContact() {
                 statusField.style.color = "#F44336";
                 statusField.innerHTML = "Error: Email could not been send!";
             }
-            sendStatus = 1;
-            tokenRequest();
+            sendStatus = true;
         }
     }
 }
 
-function validate(input) {
-
-}
-
 function resetStatus() {
-    if (sendStatus == 1) {
+    if (sendStatus) {
         statusField.innerHTML = "";
     }
 }
