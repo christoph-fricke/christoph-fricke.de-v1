@@ -31,9 +31,9 @@ function newToken() {
     $length = 32;
     $secure = true;
     
-    $token = bin2hex(openssl_random_pseudo_bytes($length, $secure));
-    $_SESSION['token'] = $token;
-    return $token;
+    $newToken = bin2hex(openssl_random_pseudo_bytes($length, $secure));
+    $_SESSION['token'] = $newToken;
+    return $newToken;
 }
 
 function test_input($data) {
