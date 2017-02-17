@@ -1,6 +1,7 @@
 Options -Indexes
-ErrorDocument 401 /
-ErrorDocument 403 /
-ErrorDocument 404 /
+ErrorDocument 401 /errorpage/401.html
+ErrorDocument 403 /errorpage/403.html
+ErrorDocument 404 /errorpage/404.html
+
 # Liste der Dateiendungen die als PHP7.0 verarbeitet werden sollen
 AddHandler php-fastcgi7.0 .php .phtml
