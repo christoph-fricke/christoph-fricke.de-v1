@@ -115,6 +115,7 @@ textarea {
 
 input,
 textarea {
+    color: rgba(0, 0, 0, 0.70);
     margin: 5px;
     padding: 10px 5px;
     border: 2px solid rgba(0, 0, 0, 0.54);
@@ -128,6 +129,7 @@ textarea {
 }
 
 input[type="submit"] {
+    color: rgba(0, 0, 0, 0.87);
     margin-right: 0px;
     align-self: flex-end;
     width: 30%;
@@ -149,6 +151,7 @@ input[type="submit"] {
 
 input:focus,
 textarea:focus {
+    color: rgba(0, 0, 0, 0.87);
     outline: none;
     border: 2px solid #FFC107;
 }
