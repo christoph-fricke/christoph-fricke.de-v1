@@ -1,6 +1,5 @@
 @import '_normalize';
 @import '_variables';
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:400,700');
 * {
     box-sizing: border-box;
 }
@@ -40,16 +39,17 @@ footer {
     margin: 30px;
 }
 
-header h1 {
-    font-size: 6rem;
-    font-weight: bold;
-    margin: 0px;
-}
-
-header p {
-    font-size: 2rem;
-    font-weight: normal;
-    margin: 0px;
+header {
+    h1 {
+        font-size: 6rem;
+        font-weight: bold;
+        margin: 0px;
+    }
+    p {
+        font-size: 2rem;
+        font-weight: normal;
+        margin: 0px;
+    }
 }
 
 a {
