@@ -8,7 +8,7 @@
     font-family: 'Roboto', 'Noto Sans', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: rgba(0, 0, 0, 0.87);
+    color: $primary-text-dark;
 }
 
 body {
@@ -116,7 +116,7 @@ textarea {
 
 input,
 textarea {
-    color: rgba(0, 0, 0, 0.70);
+    color: $secondary-text-dark;
     margin: 5px;
     padding: 10px 5px;
     border: 2px solid rgba(0, 0, 0, 0.54);
@@ -130,13 +130,13 @@ textarea {
 }
 
 input[type="submit"] {
-    color: rgba(0, 0, 0, 0.87);
+    color: $primary-text-dark;
     margin-right: 0px;
     align-self: flex-end;
     width: 30%;
     cursor: pointer;
     text-transform: uppercase;
-    background-color: $secondary-color-500;
+    background-color: $accent-color-500;
     border: none;
     border-radius: 0px;
 }
@@ -151,18 +151,18 @@ input[type="submit"] {
 
 input:focus,
 textarea:focus {
-    color: rgba(0, 0, 0, 0.87);
+    color: $primary-text-dark;
     outline: none;
-    border: 2px solid $secondary-color-500;
+    border: 2px solid $accent-color-500;
 }
 
 input[type="submit"]:hover {
-    background-color: $secondary-color-600;
+    background-color: $accent-color-600;
 }
 
 input[type="submit"]:focus {
     border: none;
-    background-color: $secondary-color-700;
+    background-color: $accent-color-700;
 }
 
 footer {
