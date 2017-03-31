@@ -1,0 +1,226 @@
+@import '_normalize';
+@import '_variables';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:400,700');
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Roboto', 'Noto Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $primary-color-500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 1100px;
+    margin: 30px;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header,
+section,
+footer {
+    text-align: center;
+    width: 75%;
+    margin: 30px;
+}
+
+header h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    margin: 0px;
+}
+
+header p {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0px;
+}
+
+a {
+    display: inline-block;
+    margin: 0px 20px;
+    text-decoration: none;
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+    color: #000;
+    opacity: 0.54;
+    transition: all 200ms linear;
+}
+
+.icon:hover {
+    opacity: 0.87;
+    transform: translate(0px, -5px);
+}
+
+hr {
+    background-color: rgba(0, 0, 0, 0.12);
+    border: none;
+    width: 80%;
+    height: 1px;
+    margin: 0px auto;
+}
+
+#contact {
+    font-family: 'Roboto', 'Noto Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.row,
+textarea {
+    width: 100%;
+}
+
+.row input {
+    display: inline-block;
+    width: 49.5%;
+    margin: 0px;
+}
+
+.row input:first-child {
+    margin-right: 1%;
+}
+
+.space {
+    width: 1%;
+}
+
+input,
+textarea {
+    color: rgba(0, 0, 0, 0.70);
+    margin: 5px;
+    padding: 10px 5px;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+    font-family: "Roboto";
+    border-radius: 0px;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+input[type="submit"] {
+    color: rgba(0, 0, 0, 0.87);
+    margin-right: 0px;
+    align-self: flex-end;
+    width: 30%;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: $secondary-color-500;
+    border: none;
+    border-radius: 0px;
+}
+
+#status {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px 5px;
+    order: -1;
+    line-height: 1.15em;
+}
+
+input:focus,
+textarea:focus {
+    color: rgba(0, 0, 0, 0.87);
+    outline: none;
+    border: 2px solid $secondary-color-500;
+}
+
+input[type="submit"]:hover {
+    background-color: $secondary-color-600;
+}
+
+input[type="submit"]:focus {
+    border: none;
+    background-color: $secondary-color-700;
+}
+
+footer {
+    width: 100%;
+    margin: 30px 0px 10px 0px;
+    position: relative;
+    bottom: 0px;
+}
+
+footer p {
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    header h1 {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    main {
+        width: 100%;
+        margin: 0px;
+        height: 100%;
+        box-shadow: none;
+    }
+    body {
+        background-color: #ffffff;
+        height: initial;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header,
+    section,
+    footer,
+    hr {
+        margin: 10px;
+    }
+    header h1 {
+        font-size: 4rem;
+    }
+    header p {
+        font-size: 1.5rem;
+    }
+    .icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row input {
+        width: 100%;
+        margin: 5px 0px;
+    }
+    #status {
+        order: 1;
+        margin-right: 0px;
+    }
+}
