@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+*::selection {
+    background-color: $color-accent-500;
+}
+
 :root {
     font-family: 'Roboto', 'Noto Sans', sans-serif;
     font-size: 16px;
@@ -14,7 +18,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: $primary-color-500;
+    background-color: $color-primary-500;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,7 +142,7 @@ input[type="submit"] {
     width: 30%;
     cursor: pointer;
     text-transform: uppercase;
-    background-color: $accent-color-500;
+    background-color: $color-accent-500;
     border: none;
     border-radius: 0px;
 }
@@ -155,16 +159,16 @@ input:focus,
 textarea:focus {
     color: $primary-text-dark;
     outline: none;
-    border: 2px solid $accent-color-500;
+    border: 2px solid $color-accent-500;
 }
 
 input[type="submit"]:hover {
-    background-color: $accent-color-600;
+    background-color: $color-accent-600;
 }
 
 input[type="submit"]:focus {
     border: none;
-    background-color: $accent-color-700;
+    background-color: $color-accent-700;
 }
 
 footer {
