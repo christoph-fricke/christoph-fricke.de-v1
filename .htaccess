@@ -1,11 +1,13 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} !^christoph-fricke\.de$ [NC]
-RewriteRule ^(.*)$ http://christoph-fricke.de/$1 [L,R=301]
+RewriteCond %{HTTPS} !^christoph-fricke\.de$ [NC]
+RewriteRule ^(.*)$ https://christoph-fricke.de/$1 [L,R=301]
+#RewriteCond %{HTTPS} !on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 Options -Indexes
 ErrorDocument 401 /errorpage/401.html
 ErrorDocument 403 /errorpage/403.html
 ErrorDocument 404 /errorpage/404.html
 
-# Liste der Dateiendungen die als PHP7.0 verarbeitet werden sollen
-AddHandler php-fastcgi7.0 .php .phtml
+# Liste der Dateiendungen die als PHP7.1 verarbeitet werden sollen
+AddHandler application/x-httpd-php71 .php
