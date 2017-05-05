@@ -2,6 +2,9 @@ var token;
 var statusField = document.getElementById("status");
 var sendStatus = false;
 
+/**
+ * Requests a 32 chars long token from tokenCreator.php
+ */
 function tokenRequest() {
     var request = new XMLHttpRequest();
 
@@ -15,13 +18,16 @@ function tokenRequest() {
     }
 }
 
+/**
+ * Process the data from the contact formular and sends it to the server
+ *
+ */
 function processContact() {
     var name, eMail, message, response;
     var nameField = document.getElementById("name");
     var emailField = document.getElementById("email");
     var messageField = document.getElementById("message");
     var sendMail = new XMLHttpRequest();
-
     name = nameField.value;
     eMail = emailField.value;
     message = messageField.value;
