@@ -20,7 +20,6 @@ function tokenRequest() {
 
 /**
  * Process the data from the contact formular and sends it to the server
- *
  */
 function processContact() {
     var name, eMail, message, response;
