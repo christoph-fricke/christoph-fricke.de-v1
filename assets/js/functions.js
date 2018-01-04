@@ -38,6 +38,8 @@ function processContact() {
         statusField.style.color = "#FF9800";
         statusField.innerHTML = "Warning: Email-adress is invalid.";
     } else {
+        console.error('Website is outdated and email support has ended!');
+        return;
         sendMail.open("POST", "assets/php/mail.php", true);
         sendMail.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         sendMail.send("name=" + name + "&email=" + eMail + "&message=" + message + "&token=" + token);
